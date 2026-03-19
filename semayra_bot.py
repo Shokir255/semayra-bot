@@ -293,7 +293,7 @@ def main():
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
 
     log.info("✅ Бот SEMAYRA запущен")
-    app.run_polling(close_loop=False)
+    app.run_polling(drop_pending_updates=True, close_loop=False)
 
 
 if __name__ == "__main__":
